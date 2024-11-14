@@ -19,7 +19,7 @@ const Footer = () => {
 
                 
                 <div className="relative z-10 text-center text-white max-w-screen-xl mx-auto py-20">
-                    <h1 className='text-[62px] font-bebas leading-[64px] pb-12'>
+                    <h1 className='text-[36px] md:text-[62px] font-bebas leading-[40px] pb-12'>
                         We are ready to give you the best dining experiences
                     </h1>
 

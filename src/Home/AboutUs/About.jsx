@@ -15,11 +15,11 @@ const About = () => {
         switch (activeTab) {
             case 'about':
                 return (
-                    <div>
-                        <h1 className="text-[62px] pb-6  leading-[62px] font-bebas text-left uppercase text-black">
+                    <div className='md:px-0 px-12'>
+                        <h1 className="md:text-[62px] text-[40px] pb-6  md:leading-[62px] leading-[42px] font-bebas text-left uppercase text-black">
                             Exceptional culinary experience and delicious food
                         </h1>
-                        <p className='pb-12 text-xl'>
+                        <p className='pb-12 md:text-xl text-sm'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare non sed est cursus. Vel hac convallis
                             ipsum, facilisi odio pellentesque bibendum viverra tempus. Lorem ipsum dolor sit amet consectetur
                             adipiscing elit do eiusmod tempor incididunt ut labore et dolore magna minim veniam nostrud exercitation.
@@ -36,7 +36,7 @@ const About = () => {
                             <div>
                                 <div className='flex gap-2 items-center'>
                                     <img src={call} className='text-2xl text-[#BD1F17] font-bold' />
-                                    <p className='text-xl font-semibold'>+88 3426 739 485</p>
+                                    <p className='md:text-xl font-semibold'>+88 3426 739 485</p>
 
                                 </div>
                             </div>
@@ -46,11 +46,11 @@ const About = () => {
                 );
             case 'experience':
                 return (
-                    <div>
-                        <h1 className="text-[62px] pb-6 leading-[62px] font-bebas text-left uppercase text-black">
+                    <div className=' md:px-0 px-12'>
+                        <h1 className="md:text-[62px] text-[40px] pb-6  md:leading-[62px] leading-[42px]  font-bebas text-left uppercase text-black">
                             A Culinary Journey of Passion and Precision
                         </h1>
-                        <p className='pb-12 text-xl'>
+                        <p className='pb-12  md:text-xl text-sm'>
                             Our team’s culinary journey combines traditional flavors with modern techniques to create unforgettable dishes. With experience from prestigious kitchens worldwide, our chefs blend classic and contemporary styles, ensuring each dish delights all the senses.
                         </p>
 
@@ -65,7 +65,7 @@ const About = () => {
                             <div>
                                 <div className='flex gap-2 items-center'>
                                     <img src={call} className='text-2xl text-[#BD1F17] font-bold' />
-                                    <p className='text-xl font-semibold'>+88 3426 739 485</p>
+                                    <p className=' md:text-xl text-sm font-semibold'>+88 3426 739 485</p>
 
                                 </div>
                             </div>
@@ -75,8 +75,8 @@ const About = () => {
                 );
             case 'contact':
                 return (
-                    <div>
-                        <h1 className="text-[62px]  pb-6  leading-[62px] font-bebas text-left uppercase text-black">
+                    <div className='md:px-0 px-12'>
+                        <h1 className="md:text-[62px] text-[40px] pb-6  md:leading-[62px] leading-[42px]  font-bebas text-left uppercase text-black">
                             Get in Touch with Us
                         </h1>
                        
@@ -122,7 +122,7 @@ const About = () => {
                             <div>
                                 <div className='flex gap-2 items-center'>
                                     <img src={call} className='text-2xl text-[#BD1F17] font-bold' />
-                                    <p className='text-xl font-semibold'>+88 3426 739 485</p>
+                                    <p className='md:text-xl  font-semibold'>+88 3426 739 485</p>
 
                                 </div>
                             </div>
@@ -137,24 +137,25 @@ const About = () => {
 
 
     return (
-        <div className="max-w-screen-2xl mx-auto mb-32 relative">
+        <div id='about' className="max-w-screen-2xl mx-auto md:mb-32 mb-12 relative ">
             <div className='absolute -right-[175px] top-[400px]'>
-                <img src={salad} alt="" />
+                <img className='md:block hidden' src={salad} alt="" />
             </div>
-            <div className="flex gap-16 pt-32 relative">
+            <div className="flex lg:flex-row flex-col  md:flex-row gap-16 pt-32 relative">
                 {/* Image Section with Fixed Width */}
 
-                <div className='absolute  mt-4 rounded-xl  '>
-                    <img src="https://i.ibb.co.com/BPKWGRk/Market-Place.png" alt="" />
+                <div className='absolute  mt-4 rounded-xl md:left-0 left-10'>
+                    <img className='md:w-full w-[120px]  ml-12' src="https://i.ibb.co.com/BPKWGRk/Market-Place.png" alt="" />
                 </div>
                 <div className="flex-shrink-0 ">
-                    <img src={Tabimage} alt="Tab illustration" className="w-full " />
+                    <img  src={Tabimage} alt="Tab illustration" className="px-9 w-full " />
                 </div>
 
                 {/* Tabs Section */}
                 <div>
                     {/* Tab Buttons */}
-                    <div className="flex flex-row border-b border-[#B52B1D] w-[832px] gap-6">
+                    <div className="flex flex-row  px-10 md:px-0">
+                       
                         <button
                             onClick={() => setActiveTab('about')}
                             className={`px-5 py-2 text-md font-semibold ${activeTab === 'about' ? 'bg-[#B52B1D] text-white' : 'text-black'}`}
@@ -174,6 +175,8 @@ const About = () => {
                             Contact
                         </button>
                     </div>
+                    <hr className=' border-b border-[#B52B1D] w-[350px] md:ml-0 ml-10 md:w-[832px]' />
+
 
                     {/* Tab Content */}
                     <div className="mt-8">
@@ -185,32 +188,34 @@ const About = () => {
 
             {/*  about   oportunity  details --------- */}
 
-                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-32 justify-between'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-32 justify-between md:gap-7 gap-12 px-10'>
 
-                <div className='flex gap-5'>
+                <div className='flex gap-5 items-center md:items-start'>
                     <div className=' w-[90px] font-roboto flex flex-col justify-center items-center h-[90px] shadow-2xl bg-white rounded-full'>
                         <img className='' src={delibary} />
                     </div>
                     <div>
-                        <h2 className='text-[30px] font-bebas-neue font-semibold leading-[36px] uppercase'>fast delivery</h2>
+                        <h2 className='text-[24px] md:text-[30px] font-bebas-neue font-semibold leading-[36px] uppercase'>fast delivery</h2>
                         <p className='text-[20px]'>Within 30 minutes</p>
                     </div>
                 </div>
+
                 <div className='flex gap-5'>
                     <div className=' w-[90px] font-roboto flex flex-col justify-center items-center h-[90px] shadow-2xl bg-white rounded-full'>
                         <img className='' src={dinnig} />
                     </div>
                     <div>
-                        <h2 className='text-[30px] font-bebas-neue font-semibold leading-[36px] uppercase'>absolute dining</h2>
+                        <h2 className='text-[24px] md:text-[30px] font-bebas-neue font-semibold leading-[36px] uppercase'>absolute dining</h2>
                         <p className='text-[20px]'>Best buffet restaurant</p>
                     </div>
                 </div>
-                <div className='flex gap-5'>
+                
+                <div className='flex gap-5 items-center md:items-start'>
                     <div className=' w-[90px] font-roboto flex flex-col justify-center items-center h-[90px] shadow-2xl bg-white rounded-full'>
                         <img className='' src={bag} />
                     </div>
                     <div>
-                        <h2 className='text-[30px] font-bebas-neue font-semibold leading-[36px] uppercase'>pickup delivery</h2>
+                        <h2 className='text-[24px] md:text-[30px] font-bebas-neue font-semibold leading-[36px] uppercase'>pickup delivery</h2>
                         <p className='text-[20px]'>Grab your food order</p>
                     </div>
                 </div>

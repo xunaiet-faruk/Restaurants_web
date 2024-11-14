@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className=" py-5 w-full bg-transparent" style={{
             background: 'linear-gradient(123.4deg, #BD1F17 40.8%, #A61D13 120.8%, #8E1B0F 40.8%)',
         }}>
-            <nav className="flex items-center  max-w-screen-xl mx-auto justify-between px-4 py-2 text-white ">
+            <nav className="flex items-center  max-w-screen-2xl mx-auto justify-between px-4 py-2 text-white ">
                 {/* Logo */}
                 <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-white transition-all duration-200 hover:scale-110">
                     <img src={Logo} alt="Logo" />
